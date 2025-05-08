@@ -24,7 +24,7 @@ function login(){
 
         <div className="l">
             <nav>
-                <Link to="/criar-login"> <small>Não tenho conta</small> </Link>
+                <Link to="/cadastro"> <small>Não tenho conta</small> </Link>
             </nav>
         </div>
               
