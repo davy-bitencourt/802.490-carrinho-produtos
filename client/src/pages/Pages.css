@@ -1,0 +1,30 @@
+.m {
+    display: flex;
+    justify-content: center;
+}
+
+.mm {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.b {
+    padding: 0.4rem;
+}
+
+.bt{
+    margin-top: 1rem;
+
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-size: medium;
+}
+
+.l{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
