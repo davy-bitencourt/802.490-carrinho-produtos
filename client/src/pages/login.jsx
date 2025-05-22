@@ -1,7 +1,15 @@
-import { Outlet, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 import "./Pages.css";
 
 function login(){
+    const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/dashboard"); 
+  };
+
     return (
     <div>
         <div className="mm">
@@ -19,7 +27,7 @@ function login(){
         </div>
 
         <div className="m">
-            <button className="bt"> Fazer Login </button>
+            <button className="bt" onClick={handleLogin}> Fazer Login </button>
         </div>
 
         <div className="l">
