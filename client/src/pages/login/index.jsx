@@ -14,10 +14,32 @@ export default function Login() {
   }
 
   return (
+    
     <div>
-      {/* Login <button onClick={teste}>Entrar</button> */}
-      Login <button onClick={() => login()}>Entrar</button>
-      {/* <Button>Entrar 2.0</Button> */}
+        <div className="mm">
+            <p> Login </p>
+        </div>
+
+        <div>
+            <p className="m"> Email </p>
+            <input className="b" type="text" placeholder="email"/>
+        </div>
+
+        <div>
+            <p className="m"> Senha </p>
+            <input className="b" type="password" placeholder="senha"/>
+        </div>
+
+        <div className="m">
+            <button className="bt" onClick={() => login()}>Entrar </button>
+        </div>
+
+        <div className="l">
+            <nav>
+                <Link to="/cadastro"> <small>Não tenho conta</small> </Link>
+            </nav>
+        </div>
+              
     </div>
-  );
+    )
 }

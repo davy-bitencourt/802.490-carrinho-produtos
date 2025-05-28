@@ -1,4 +1,4 @@
-import "./Pages.css";
+import "../Pages.css";
 
 function criarLogin(){
     return (
