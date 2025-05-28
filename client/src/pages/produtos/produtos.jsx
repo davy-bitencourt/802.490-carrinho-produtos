@@ -1,5 +1,5 @@
 import './produtos.css'
-import { produtos } from '../assets/produtos'
+import { produtos } from '../../assets/produtos'
 
 function Produtos() {
   const itens = produtos; 
