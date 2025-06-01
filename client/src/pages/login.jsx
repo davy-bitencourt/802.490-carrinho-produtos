@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Barra from "../components/barra.jsx";
 import { useAuth } from "../contexts/AuthContext";
 import "./Pages.css";
@@ -26,6 +26,7 @@ function Login() {
         <form onSubmit={handleLogin}>
           <input type="text" placeholder="Usuário" value={usuario} onChange={(e) => setUsuario(e.target.value)} required/>
           <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} required/>
+          <Link to="/cadastro" className="link-conta"> Criar uma conta, caso não haja </Link>
           <button type="submit" className="botao">Entrar</button>
           {error && <p className="erro">{error}</p>}
         </form>
