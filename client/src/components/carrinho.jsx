@@ -1,4 +1,4 @@
-import '../pages/Pages.css'; // opcional, se quiser separar o CSS
+import '../pages/Pages.css';
 
 function Carrinho({ itens, fechar }) {
   return (

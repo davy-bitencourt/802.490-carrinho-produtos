@@ -3,10 +3,20 @@ import { useState } from 'react';
 import { produtos } from '../assets/produtos';
 import Barra from '../components/barra.jsx';
 import Carrinho from '../components/carrinho.jsx';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Produtos() {
   const [carrinho, setCarrinho] = useState([]);
   const [mostrarCarrinho, setMostrarCarrinho] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = localStorage.getItem("usuarioLogado");
+    if (!user) {
+      navigate("/login");
+    }
+  }, []);
 
   const adicionarAoCarrinho = (item) => {
     setCarrinho([...carrinho, item]);
@@ -19,7 +29,7 @@ function Produtos() {
   return (
     <div>
 
-      <div className="bt">
+      <div>
         <Barra />
         <button className="botao-carrinho" onClick={alternarCarrinho}> 🛒 Carrinho ({carrinho.length})</button>
       </div>

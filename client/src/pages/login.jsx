@@ -1,37 +1,37 @@
-import { Outlet, Link } from "react-router-dom";
-import "./Pages.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Barra from "../components/barra.jsx";
+import { useAuth } from "../contexts/AuthContext";
+import "./Pages.css";
 
-export default function Login(){
-    return (
-        <div>
+function Login() {
+  const [usuario, setUsuario] = useState("");
+  const [senha, setSenha] = useState("");
+  const { user, login, error } = useAuth();
+  const navigate = useNavigate();
 
-            <Barra/>
+  const handleLogin = (e) => {
+    e.preventDefault(); // Chama a função do contexto
+    const success = login(usuario, senha);
+    if (success) { // Redireciona após login bem-sucedido
+      navigate("/");
+    } // Se falhar, o `error` será preenchido no contexto e exibiremos abaixo
+  };
 
-            <div className="mm">
-                <p> Login </p>
-            </div>
-
-            <div>
-                <p className="m"> Email </p>
-                <input className="b" type="text" placeholder="email"/>
-            </div>
-
-            <div>
-                <p className="m"> Senha </p>
-                <input className="b" type="password" placeholder="senha"/>
-            </div>
-
-            <div className="m">
-                <button className="bt"> Fazer Login </button>
-            </div>
-
-            <div className="l">
-                <nav>
-                    <Link to="/cadastro"> <small>Não tenho conta</small> </Link>
-                </nav>
-            </div>
-                
-        </div>
-    )
+  return (
+    <>
+      <Barra />
+      <div className="form-container">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <input type="text" placeholder="Usuário" value={usuario} onChange={(e) => setUsuario(e.target.value)} required/>
+          <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} required/>
+          <button type="submit" className="botao">Entrar</button>
+          {error && <p className="erro">{error}</p>}
+        </form>
+      </div>
+    </>
+  );
 }
+
+export default Login;

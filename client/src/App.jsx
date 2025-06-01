@@ -9,15 +9,13 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
       <Routes>
           <Route path="/" element={<Produtos/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/cadastro" element={<Cadastro/>}/>
-          <Route path="/criar-produto" element={<ProdutoCriar/>}/>
+          <Route path="/cadastar-produto" element={<ProdutoCriar/>}/>
           <Route path="*" element={<NoPage/>}/>
       </Routes>
-    </BrowserRouter>
     </>
   )
 }
