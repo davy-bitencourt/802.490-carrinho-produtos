@@ -26,7 +26,7 @@ function Login() {
         <form onSubmit={handleLogin}>
           <input type="text" placeholder="Usuário" value={usuario} onChange={(e) => setUsuario(e.target.value)} required/>
           <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} required/>
-          <Link to="/cadastro" className="link-conta"> Criar uma conta, caso não haja </Link>
+          <Link to="/cadastro" className="link-conta"> Criar uma conta, caso não haja uma </Link>
           <button type="submit" className="botao">Entrar</button>
           {error && <p className="erro">{error}</p>}
         </form>
