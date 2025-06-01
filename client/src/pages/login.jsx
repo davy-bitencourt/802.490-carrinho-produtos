@@ -11,11 +11,11 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Chama a função do contexto
+    e.preventDefault(); 
     const success = login(usuario, senha);
-    if (success) { // Redireciona após login bem-sucedido
+    if (success) { 
       navigate("/");
-    } // Se falhar, o `error` será preenchido no contexto e exibiremos abaixo
+    } 
   };
 
   return (

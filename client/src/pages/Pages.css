@@ -12,6 +12,11 @@
     align-items: center;
 }
 
+.check{
+  width: 1rem;
+  height: 1rem;
+}
+
 .mm {
     display: flex;
     justify-content: center;
@@ -293,7 +298,3 @@ button.excluir {
   margin-bottom: 5rem;
 }
 
-.check{
-  width: 1rem;
-  height: 1rem;
-}
