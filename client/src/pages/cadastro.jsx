@@ -1,8 +1,12 @@
 import "./Pages.css";
+import Barra from "../components/barra.jsx";
 
-function criarLogin(){
+export default function Cadastro(){
     return (
     <div>
+        
+        <Barra/>
+
         <div className="mm">
             <p> Cadastro </p>
         </div>
@@ -49,5 +53,3 @@ function criarLogin(){
     </div>
     )
 }
-
-export default criarLogin;

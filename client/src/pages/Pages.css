@@ -1,6 +1,11 @@
 #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
     font-size: 1rem;
-}
+  
+  }
 
 .m {
     display: flex;
@@ -31,4 +36,141 @@
     display: flex;
     justify-content: center;
     padding: 0.5rem;
+}
+
+  
+  .b2{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .conteinerprod{
+    background-color: white;
+    width: 15rem;
+    height: 16rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 6px #aaaaaa;
+    margin: 0.5rem;
+  }
+  
+  .infoprod {
+    display: grid;
+    grid-template-rows: 2;
+    padding-bottom: 0.2rem;
+  }
+  
+  .nome{
+    color: black;
+  }
+  
+  .preco {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .botao {
+    background-color: orange;
+    color: white;
+    border: none;
+    width: 13rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .botao:hover {
+    background-color: #e69500; /* tom mais escuro de laranja */
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .botao:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .conteinerBar{
+    background-color: orange;
+    color: white;
+    width: auto;
+    height: fit-content;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .fontbar {
+    padding: 0.5rem;
+    color: white;
+  }
+  
+  .fontbar a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .carrinho-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+  }
+  
+  .carrinho {
+    width: 300px;
+    background-color: white;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+.fechar {
+  all: unset; /* remove TUDO que o botão tem por padrão */
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.fechar:hover {
+  color: red;
+}
+
+.botao-carrinho {
+  position: absolute; /* ou use flexbox na barra se preferir */
+  top: 10px;
+  right: 20px;
+
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-carrinho:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
 }

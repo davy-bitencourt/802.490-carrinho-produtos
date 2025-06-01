@@ -1,43 +1,37 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../AuthContext";
+import { Outlet, Link } from "react-router-dom";
 import "./Pages.css";
+import Barra from "../components/barra.jsx";
 
-function login(){
-    const { login } = useAuth();
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    navigate("/dashboard"); 
-  };
-
+export default function Login(){
     return (
-    <div>
-        <div className="mm">
-            <p> Login </p>
-        </div>
-
         <div>
-            <p className="m"> Email </p>
-            <input className="b" type="text" placeholder="email"/>
-        </div>
 
-        <div>
-            <p className="m"> Senha </p>
-            <input className="b" type="password" placeholder="senha"/>
-        </div>
+            <Barra/>
 
-        <div className="m">
-            <button className="bt" onClick={handleLogin}> Fazer Login </button>
-        </div>
+            <div className="mm">
+                <p> Login </p>
+            </div>
 
-        <div className="l">
-            <nav>
-                <Link to="/cadastro"> <small>Não tenho conta</small> </Link>
-            </nav>
+            <div>
+                <p className="m"> Email </p>
+                <input className="b" type="text" placeholder="email"/>
+            </div>
+
+            <div>
+                <p className="m"> Senha </p>
+                <input className="b" type="password" placeholder="senha"/>
+            </div>
+
+            <div className="m">
+                <button className="bt"> Fazer Login </button>
+            </div>
+
+            <div className="l">
+                <nav>
+                    <Link to="/cadastro"> <small>Não tenho conta</small> </Link>
+                </nav>
+            </div>
+                
         </div>
-              
-    </div>
     )
 }
-
-export default login;

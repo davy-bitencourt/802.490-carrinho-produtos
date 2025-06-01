@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import "./Pages.css";
 
-function Dashboard(){
+function Perfil(){
     return (
     <div>
         <div className="mm">
@@ -11,4 +11,4 @@ function Dashboard(){
     )
 }
 
-export default Dashboard;
+export default Perfil;
