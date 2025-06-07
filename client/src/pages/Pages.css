@@ -57,6 +57,11 @@
     padding-bottom: 0.2rem;
   }
   
+  .id {
+    color: orange;
+    font-weight: bold;
+  }
+
   .nome{
     color: black;
   }
@@ -91,6 +96,43 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   
+  .carrinho {
+  background-color: white;
+  padding: 20px;
+  width: 400px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.carrinho-itens {
+  overflow-y: auto;
+  flex: 1;
+  margin-bottom: 10px;
+  padding-right: 5px;
+}
+
+.carrinho-footer {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding-top: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.botao-finalizar {
+  width: 100%;
+  padding: 10px;
+  font-size: large;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
 
   .conteinerBar{
     background-color: orange;
